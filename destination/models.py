@@ -2,11 +2,11 @@ from django.db import models
 
 # Create your models here.
 class Destination(models.Model):
-    place = models.CharField(max_length=100)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    city = models.TextField()
+    place = models.CharField(max_length=180)
+#    created_at = models.DateTimeField(auto_now_add=True, auto_now=False, blank=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True)
+    city = models.CharField(max_length=180)
     description = models.TextField()
 
-    def _str_(self):
-        return self.title
+    def __str__(self):
+        return self.place
