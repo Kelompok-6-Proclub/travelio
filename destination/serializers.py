@@ -4,4 +4,4 @@ from .models import Destination
 class DestSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Destination
-        fields = ('id', 'place', 'image', 'created_at', 'updated_at', 'city', 'description')
+        fields = ('id', 'place', 'updated_at', 'city', 'description')
