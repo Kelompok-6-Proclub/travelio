@@ -7,4 +7,4 @@ from .models import Destination
 
 class DestViewSet(viewsets.ModelViewSet):
     queryset = Destination.objects.all().order_by('id')
-    serializers_class = DestSerializer
+    serializer_class = DestSerializer
