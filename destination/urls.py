@@ -1,11 +1,11 @@
-from django.urls import include, path
-from rest_framework import routers
+from django.urls import path
 from . import views
 
-router = routers.DefaultRouter()
-router.register(r'destinations', views.DestViewSet)
 
 urlpatterns = [
-        path('', include(router.urls)),
-        path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+        path('', views.destList, name="destinations"),
+        path('detail/<str:pk>/', views.destDetail, name="detail"),
+        path('create/', views.destCreate, name="create"),
+        path('edit/<str:pk>', views.destUpdate, name="edit"),
+        path('delete/<str:pk>', views.destDelete, name="delete"),
         ]
