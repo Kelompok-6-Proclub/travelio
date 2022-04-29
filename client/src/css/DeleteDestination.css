@@ -1,0 +1,83 @@
+.delete {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+    padding: 3rem 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 3px;
+    background-color: #fff;
+    z-index: 4;
+    transition: .3s ease;
+}
+
+.delete__popUp {
+    opacity: 1;
+    visibility: visible;
+}
+
+.delete h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.delete__box-btn {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+}
+
+.delete__box-btn .delete__btn,
+.delete__box-btn .cancel__btn {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--font-color-primary);
+    justify-self: start;
+    padding: .8rem 2rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #f51d1d;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.delete__box-btn .delete__btn:hover {
+    background-color: #d12323;
+}
+
+.delete__box-btn .cancel__btn {
+    background-color: #f2f2f2;
+}
+
+.delete__box-btn .cancel__btn:hover {
+    background-color: #dedede;
+}
+
+.delete__box-btn .delete__btn:active,
+.delete__box-btn .cancel__btn:active {
+    transform: scale(.96);
+}
+
+.overlay-delete {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0,0,0,.8);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    transition: .2s ease;
+}
+
+.overlay-deletePopUp {
+    opacity: 1;
+    visibility: visible;
+}

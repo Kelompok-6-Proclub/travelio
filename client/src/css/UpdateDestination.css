@@ -1,0 +1,50 @@
+.update__input-box {
+    position: fixed;
+    width: 60%;
+    height: 85%;
+    overflow: auto;
+    border-radius: 3px;
+    padding: 3rem 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+    background-color: #fff;
+    z-index: 4;
+    transition: .3s ease;
+}
+
+.update__input-boxPopUp {
+    opacity: 1;
+    visibility: visible;
+}
+
+.update__input-box h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.update__input-box form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.update__input-box form div:last-child {
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 2rem;
+}
+
+.update__input-box .cancel__btn {
+    background-color: #f2f2f2;
+    transition: .1s ease;
+}
+
+.update__input-box .cancel__btn:hover {
+    background-color: #dedede;
+}

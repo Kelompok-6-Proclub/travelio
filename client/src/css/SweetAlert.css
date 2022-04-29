@@ -1,0 +1,39 @@
+.alert {
+    position: fixed;
+    inset: 0 0 0 0;
+    padding: 2rem 4rem;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 3px;
+    background-color: #fff;
+    z-index: 4;
+    transition: .35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.alertPopUp {
+    top: 15%;
+    left: 50%;
+}
+
+.alert h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.alert button {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--font-color-primary);
+    justify-self: start;
+    padding: .8rem 2rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #20eb2e;
+    cursor: pointer;
+    transition: .1s ease;
+}

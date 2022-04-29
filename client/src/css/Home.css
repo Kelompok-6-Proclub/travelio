@@ -1,0 +1,128 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+}
+
+.home__banner {
+    height: calc(100vh - 8.9rem);
+    background-image: linear-gradient(0, rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../images/banner.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0 7rem;
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-gap: 2rem;
+}
+
+.home__banner--title {
+    font-size: 4rem;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.home__banner--cta,
+.home__banner--cta:visited {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+    font-weight: 500;
+    background-color: var(--color-primary);
+    padding: .6rem 1.2rem;
+    border-radius: 3px;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+    transition: .1s ease;
+}
+
+.home__banner--cta:active {
+    transform: scale(.96);
+}
+
+.home__feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 6rem;
+    margin-top: 12rem;
+}
+
+.home__feature--title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.home__feature--box {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 4rem;
+}
+
+.home__feature--find,
+.home__feature--create {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2rem;
+    padding: 3rem 4rem 5rem;
+    text-align: center;
+    border: 2.5px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0.4rem 2.4rem 6rem rgba(109, 141, 173, .2);
+    transition: .1s ease;
+}
+
+.home__feature--find:hover,
+.home__feature--create:hover {
+    border: 3px solid var(--color-primary);
+}
+
+.home__feature--find {
+
+}
+
+.home__feature--create {
+
+}
+
+.home__feature--subTitle {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-top: -1rem;
+}
+
+.home__feature--divider {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--font-color-secondary);
+    align-self: center;
+}
+
+.home__feature--desc {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--font-color-secondary);
+    margin-top: -1rem;
+}
+
+.home__feature--cta,
+.home__feature--cta:visited {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: .4rem .8rem;
+    border-radius: 3px;
+    transition: .1s ease;
+}
+
+.home__feature--cta:active {
+    transform: scale(.96);
+}

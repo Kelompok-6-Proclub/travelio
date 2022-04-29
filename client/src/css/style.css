@@ -1,0 +1,57 @@
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --font-color-primary: #191919;
+    --font-color-secondary: #8b90a0;
+    --color-primary: #B91646;
+    --color-secondary: #F7F7F7;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--color-secondary);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    color: var(--font-color-primary);
+    line-height: 1.6;
+  }
+
+  .fixBody {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
+
+  .lottie {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .loader {
+    width: 100%;
+    height: calc(100vh - 25rem);
+    display: grid;
+    place-items: center;
+  }
+
+  .loader .lottie {
+    width: 8rem;
+    height: 8rem;
+  }
