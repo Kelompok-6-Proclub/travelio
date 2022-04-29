@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import checklist from '../icon/checklist.json';
 import SweetAlert from './SweetAlert';
 import '../css/Compose.css';
 import '../css/Form.css';
@@ -43,7 +44,9 @@ const Compose = () => {
                 return response.json();
             }).then(res => {
                 handleAlert(res);
+                console.log(res);
             });
+        setFormValue({place: '', city: '', description: ''})
     }
 
     return (
@@ -63,10 +66,14 @@ const Compose = () => {
                         <label htmlFor="desc" className="compose__label">Description</label>
                         <textarea id='desc' value={description} name='description' className="compose__input" cols="30" rows="5" placeholder='Description . . .' onChange={handleInputChange} required autoComplete='off'></textarea>
                     </div>
-                    <button type='submit'>Submit</button>
+                    <div>
+                        <button type='submit'>Submit</button>
+                        <a href="/">Cancel</a>
+                    </div>
                 </form>
             </div>
-            <SweetAlert alertPopUp={alertPopUp} messageAlert={messageAlert} alertButton={alertButton}  />
+            <SweetAlert alertPopUp={alertPopUp} messageAlert={messageAlert} alertButton={alertButton} dataLottie={checklist} />
+            <div className={`overlay ${alertPopUp && 'overlay-alertPopUp overlayPopUp'}`}></div>
         </div>
     )
 }

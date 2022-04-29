@@ -3,7 +3,7 @@ import '../css/Form.css';
 import '../css/UpdateDestination.css';
 
 const UpdateDestination = ({updateValue, updatePopUp, handleCardPopIn, handleUpdateChange, handleUpdateSubmit}) => {
-    const {id, placeUpdate, cityUpdate, descriptionUpdate} = updateValue
+    const {placeUpdate, cityUpdate, descriptionUpdate} = updateValue
 
     return (
         <div className={`update__input-box ${updatePopUp && 'update__input-boxPopUp'}`}>
@@ -21,7 +21,7 @@ const UpdateDestination = ({updateValue, updatePopUp, handleCardPopIn, handleUpd
                     <label htmlFor="desc" className="update__label">Description</label>
                     <textarea id='desc' value={descriptionUpdate} name='descriptionUpdate' className="update__input" cols="30" rows="5" placeholder='Description . . .' onChange={handleUpdateChange} required autoComplete='off'></textarea>
                 </div>
-                <div className="">
+                <div>
                     <button type='submit' className="update__btn">Update</button>
                     <button type='button' className="cancel__btn" onClick={handleCardPopIn}>Cancel</button>
                 </div>

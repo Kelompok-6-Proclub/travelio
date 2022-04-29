@@ -21,6 +21,12 @@
     visibility: visible;
 }
 
+.delete .lottie {
+    width: 12rem;
+    height: 12rem;
+    justify-self: center;
+}
+
 .delete h1 {
     font-size: 2.4rem;
     font-weight: 600;
@@ -31,6 +37,7 @@
     grid-template-columns: repeat(2, max-content);
     grid-auto-rows: min-content;
     grid-gap: 2rem;
+    justify-self: end;
 }
 
 .delete__box-btn .delete__btn,
@@ -49,6 +56,10 @@
     transition: .1s ease;
 }
 
+.delete__box-btn .delete__btn {
+    color: #fff;
+}
+
 .delete__box-btn .delete__btn:hover {
     background-color: #d12323;
 }
@@ -64,20 +75,4 @@
 .delete__box-btn .delete__btn:active,
 .delete__box-btn .cancel__btn:active {
     transform: scale(.96);
-}
-
-.overlay-delete {
-    position: fixed;
-    inset: 0 0 0 0;
-    background-color: rgba(0,0,0,.8);
-    backdrop-filter: blur(2px);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 3;
-    transition: .2s ease;
-}
-
-.overlay-deletePopUp {
-    opacity: 1;
-    visibility: visible;
 }

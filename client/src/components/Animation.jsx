@@ -1,12 +1,11 @@
 import React from "react";
 import Lottie from 'react-lottie';
-import pin from '../icon/pin.json';
 
-const PinAnimation = () => {
+const Animation = ({data}) => {
     const defaultOptions = {
         loop: true,
         autoplay: true, 
-        animationData: pin,
+        animationData: data,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
         }
@@ -21,6 +20,6 @@ const PinAnimation = () => {
             />
         </div>
     )
-    }
+}
 
-export default PinAnimation
+export default Animation

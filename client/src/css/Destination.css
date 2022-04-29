@@ -1,8 +1,9 @@
 .destination {
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
     margin-top: 6rem;
-    padding: 0 7rem;
+    padding: 0 7rem 2rem;
 }
 
 .destination__box {
@@ -32,6 +33,7 @@
 }
 
 .destination__card .destination__card-title {
+    text-transform: capitalize;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -46,6 +48,7 @@
 }
 
 .destination__card h2 {
+    text-transform: capitalize;
     font-size: 1.6rem;
     font-weight: 600;
     display: flex;
@@ -65,18 +68,38 @@
     font-weight: 400;
 }
 
-.overlay {
-    position: fixed;
-    inset: 0 0 0 0;
-    background-color: rgba(0,0,0,.8);
-    backdrop-filter: blur(2px);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-    transition: .2s ease;
+.destination__empty {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    grid-gap: 2rem;
 }
 
-.overlayPopUp {
-    opacity: 1;
-    visibility: visible;
+.destination__empty h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: -2rem;
+}
+
+.destination__empty a,
+.destination__empty a:visited {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: .4rem .8rem;
+    border-radius: 3px;
+    transition: .1s ease;
+}
+
+.destination__empty a:active {
+    transform: scale(.96);
+}
+
+.destination__empty .lottie {
+    width: 20rem;
+    height: 20rem;
 }
