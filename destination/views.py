@@ -23,7 +23,9 @@ def destCreate(request):
 
     if serializer.is_valid():
         serializer.save()
-    return Response(serializer.data)
+    Response(serializer.data)
+
+    return Response("Create Successful")
 
 @api_view(['PUT'])
 def destUpdate(request, pk):
