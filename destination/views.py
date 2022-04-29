@@ -32,11 +32,13 @@ def destUpdate(request, pk):
 
     serializer.is_valid(raise_exception=True)
     serializer.save()
-    return Response(serializer.data)
+    Response(serializer.data)
+
+    return Response('Update Successful')
 
 @api_view(['DELETE'])
 def destDelete(request, pk):
     dest = Destination.objects.get(id=pk)
     dest.delete()
 
-    return Response('Deleted')
+    return Response('Delete Successful')
