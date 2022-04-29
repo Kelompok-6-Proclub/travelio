@@ -11,11 +11,11 @@ def destList(request):
     serializer = DestSerializer(dests, many=True)
     return Response(serializer.data)
 
-@api_view(['GET'])
-def destDetail(request, pk):
-    dests = Destination.objects.get(id=pk)
-    serializer = DestSerializer(dests, many=False)
-    return Response(serializer.data)
+#@api_view(['GET'])
+#def destDetail(request, pk):
+#    dests = Destination.objects.get(id=pk)
+#    serializer = DestSerializer(dests, many=False)
+#    return Response(serializer.data)
 
 @api_view(['POST'])
 def destCreate(request):
@@ -23,7 +23,9 @@ def destCreate(request):
 
     if serializer.is_valid():
         serializer.save()
-    return Response(serializer.data)
+    Response(serializer.data)
+
+    return Response("Create Successful")
 
 @api_view(['PUT'])
 def destUpdate(request, pk):
@@ -32,11 +34,13 @@ def destUpdate(request, pk):
 
     serializer.is_valid(raise_exception=True)
     serializer.save()
-    return Response(serializer.data)
+    Response(serializer.data)
+
+    return Response('Update Successful')
 
 @api_view(['DELETE'])
 def destDelete(request, pk):
     dest = Destination.objects.get(id=pk)
     dest.delete()
 
-    return Response('Deleted')
+    return Response('Delete Successful')
