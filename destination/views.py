@@ -11,11 +11,11 @@ def destList(request):
     serializer = DestSerializer(dests, many=True)
     return Response(serializer.data)
 
-@api_view(['GET'])
-def destDetail(request, pk):
-    dests = Destination.objects.get(id=pk)
-    serializer = DestSerializer(dests, many=False)
-    return Response(serializer.data)
+#@api_view(['GET'])
+#def destDetail(request, pk):
+#    dests = Destination.objects.get(id=pk)
+#    serializer = DestSerializer(dests, many=False)
+#    return Response(serializer.data)
 
 @api_view(['POST'])
 def destCreate(request):
