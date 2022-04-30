@@ -1,0 +1,41 @@
+.navigation {
+    padding: 2rem 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+}
+
+.navigation__logo,
+.navigation__logo:visited {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-primary);
+}
+
+.navigation__tab {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.navigation__link,
+.navigation__link:visited {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--font-color-primary);
+    padding: .4rem .8rem;
+    border-radius: 3px;
+    transition: .2s ease;
+}
+
+.navigation__link:hover {
+    background-color: rgba(185, 22, 70, .1);
+}
+
+.navigation__link.active {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}

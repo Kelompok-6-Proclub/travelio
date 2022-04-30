@@ -1,0 +1,105 @@
+.destination {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    margin-top: 6rem;
+    padding: 0 7rem 2rem;
+}
+
+.destination__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    grid-row-gap: 3rem;
+}
+
+.destination__card {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0.4rem 2.4rem 6rem rgba(109, 141, 173, .1);
+    padding: 3rem 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: .2s ease;
+}
+
+.destination__card:hover {
+    transform: translateY(-10px);
+    border: 1.5px solid var(--color-primary);
+}
+
+.destination__card .destination__card-title {
+    text-transform: capitalize;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 2rem;
+    font-weight: 700;
+    align-items: center;
+}
+
+.destination__card .destination__card-title img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.destination__card h2 {
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.destination__card h2 img {
+    width: 2rem;
+    height: 2rem;
+}
+.destination__card div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.destination__empty {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+.destination__empty h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: -2rem;
+}
+
+.destination__empty a,
+.destination__empty a:visited {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: .4rem .8rem;
+    border-radius: 3px;
+    transition: .1s ease;
+}
+
+.destination__empty a:active {
+    transform: scale(.96);
+}
+
+.destination__empty .lottie {
+    width: 20rem;
+    height: 20rem;
+}

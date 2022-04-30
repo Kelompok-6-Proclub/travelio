@@ -1,0 +1,57 @@
+.compose {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    padding: 0 7rem;
+    margin-top: 6rem;
+}
+
+.compose__title {
+    font-size: 3rem;
+    font-weight: 600;
+    width: 40%;
+}
+
+.compose__input-box {
+    width: 40%;
+}
+
+.compose__input-box form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.compose__input-box div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+}
+
+.compose__input-box div:last-child a {
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--font-color-primary);
+    justify-self: start;
+    padding: .8rem 2rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    transition: .1s ease;
+}
+
+.compose__input-box div:last-child a:hover {
+    background-color: #dedede;
+}
+
+.compose__input-box div:last-child a:active {
+    transform: scale(.96);
+}

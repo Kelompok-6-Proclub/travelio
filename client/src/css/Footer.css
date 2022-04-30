@@ -1,0 +1,14 @@
+.footer {
+    background-color: var(--color-primary);
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 12rem;
+}
+
+.footer p {
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 1.8rem;
+}
