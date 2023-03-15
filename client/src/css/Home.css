@@ -46,7 +46,7 @@
     grid-template-columns: 1fr;
     justify-items: center;
     grid-gap: 6rem;
-    margin-top: 12rem;
+    margin: 12rem 0 6rem
 }
 
 .home__feature--title {
@@ -80,14 +80,6 @@
 .home__feature--find:hover,
 .home__feature--create:hover {
     border: 3px solid var(--color-primary);
-}
-
-.home__feature--find {
-
-}
-
-.home__feature--create {
-
 }
 
 .home__feature--subTitle {
